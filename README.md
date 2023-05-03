@@ -44,6 +44,24 @@ From there, the `contracts/Lock.sol` (and the contract name) should be changed t
 - `setController.js`
 - `write.js`
 
+Be sure to also update the `module.exports` object in `hardhat.config.js` with information needed for the Tableland Hardhat plugin as well as Filecoin Hyperspace deployment. This file should also import `@tableland/hardhat` and `dotenv`.
+
+```js
+// ...
+localTableland: {
+  silent: false,
+  verbose: false,
+},
+networks: {
+  "filecoin-hyperspace": {
+    url: "https://rpc.ankr.com/filecoin_testnet", // No API auth needed.
+    accounts: [process.env.PRIVATE_KEY],
+  },
+},
+contract: "",
+// ...
+```
+
 The workshop itself walks through how these files are altered to get to the code's end state in this repo.
 
 ## Usage
@@ -62,7 +80,7 @@ If you are developing locally, you'll first want to start a local Hardhat and Ta
 npx hardhat node --network local-tableland
 ```
 
-Then, you can run the deploy script:
+Then, you can run the deploy script—**be sure to update the `contract`** variable in `hardhat.config.js` with the value logged in the script:
 
 ```bash
 npx hardhat run scripts/deploy.js --network localhost
