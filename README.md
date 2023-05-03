@@ -8,7 +8,7 @@ Tableland is a decentralized SQL database built on and adjacent to EVM chains. I
 
 This workshop walks through the very basics for setting up a smart contract, developing with Local Tableland, and deploying to Filecoin Hyperspace.
 
-## Setup
+### Project structure
 
 If you're following along, the following outlines steps needed to recreate the structure in this repository. These steps are not needed if you simply clone or fork this repo.
 
@@ -45,6 +45,8 @@ First, install dependencies with `npm`:
 ```bash
 npm install
 ```
+
+You'll also want to ensure you have a private key accessible—create a `.env` and set your private key to the variable `PRIVATE_KEY`.
 
 If you are developing locally, you'll first want to start a local Hardhat and Tableland node:
 
