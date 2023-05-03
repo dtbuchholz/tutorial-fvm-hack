@@ -2,6 +2,7 @@
   "name": "hardhat-project",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@tableland/local": "^1.2.1",
     "dotenv": "^16.0.3",
     "hardhat": "^2.13.0",
     "prettier": "^2.8.8",
@@ -11,7 +12,6 @@
     "@openzeppelin/contracts": "^4.8.2",
     "@tableland/evm": "^4.2.2",
     "@tableland/hardhat": "^0.0.4",
-    "@tableland/local": "^0.0.5",
     "@tableland/sdk": "^4.2.1"
   }
 }
