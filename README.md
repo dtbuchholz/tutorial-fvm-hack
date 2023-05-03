@@ -25,11 +25,19 @@ You'll also need the following dependencies:
 - `@tableland/hardhat`
 - `dotenv`
 
-And development dependencies:
+Do this will the following command:
 
-- `@tableland/local`
+```bash
+npm i @tableland/evm @tableland/sdk @tableland/hardhat dotenv
+```
 
-From there, the `contracts/Lock.sol` should be changed to `contracts/FVM.sol`, and four scripts should be created in the `scripts` directory:
+And development dependency of `@tableland/local`:
+
+```bash
+npm i -D @tableland/local
+```
+
+From there, the `contracts/Lock.sol` (and the contract name) should be changed to `contracts/FVM.sol`, and four scripts should be created in the `scripts` directory:
 
 - `deploy.js`
 - `read.js`
